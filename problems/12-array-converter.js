@@ -12,8 +12,17 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // your code here
-}
+  let obj = {}
+    for (let i = 0; i < array.length; i++) {
+      let currValue = array[i]
+      if (obj[currValue] === undefined) {
+        obj[currValue] = 1
+      } else {
+        obj[currValue] += 1
+      }
+    }
+    return obj
+  }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = arrayConverter;
